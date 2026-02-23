@@ -1,66 +1,33 @@
-## Foundry
+# FundMe - Decentralized Crowdfunding Protocol 💸
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A secure Solidity-based smart contract that allows users to fund a project with ETH and the owner to withdraw funds, featuring real-time price conversions.
 
-Foundry consists of:
+## 🛠 Tech Stack
+- **Language:** Solidity (^0.8.x)
+- **Framework:** Foundry
+- **Oracles:** Chainlink Price Feeds
+- **Network:** Sepolia Testnet
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## ✨ Key Features
+- **Value Transfer:** Secure "Fund" and "Withdraw" logic with strictly enforced ownership rules.
+- **Chainlink Integration:** Uses Price Feeds to ensure a minimum USD value is met regardless of ETH volatility.
+- **Gas Optimization:** Implemented `immutable` and `constant` variables and custom errors over `require` strings to minimize gas costs.
+- **Security:** Built-in protection against re-entrancy and unauthorized access.
 
-## Documentation
+## 🧪 Testing with Foundry
+This project follows a rigorous testing suite:
+- **Unit Tests:** Testing individual functions in isolation.
+- **Integration Tests:** Ensuring the contract interacts correctly with the Chainlink mock/mainnet price feeds.
+- **Staging Tests:** Automated scripts for Sepolia testnet verification.
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+### Run Tests
+```bash
+forge test
 ```
 
-### Test
+### 🚀 Deployment
+Deployed and verified on the Sepolia Testnet.
 
-```shell
-$ forge test
-```
+Contract Address: 0x0162206354D3EB21CFdBd32A4403e09a8A7961c7
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Explorer: [https://sepolia.etherscan.io/address/0x0162206354d3eb21cfdbd32a4403e09a8a7961c7#code]
